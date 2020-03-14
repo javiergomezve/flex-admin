@@ -1,10 +1,10 @@
-const menuIzquierdo = document.querySelector('.menu-izquierdo');
+const menuIzquierdo = document.querySelector('.menu-left');
 
 menuIzquierdo.addEventListener('click', (e)  => {
        const claseMenu = e.target.classList;
        
        // Selecciona el contenedor
-       const contenedor = document.querySelector('.pagina'),
+       const contenedor = document.querySelector('.page'),
              flechaIzq = document.querySelector('.fa-arrow-left'),
              flechaDer = document.querySelector('.fa-arrow-right');
 
