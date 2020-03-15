@@ -26,6 +26,13 @@ img {
     display: none;
 }
 
+.no-menu.page {
+
+    .sidebar {
+        margin-left: -20rem;
+    }
+}
+
 .page {
     min-height: 100%;
     display: flex;
@@ -74,6 +81,15 @@ img {
             display: flex;
             align-items: center;
             padding: 1rem;
+
+            i {
+                color: $blanco;
+                font-size: 1.5rem;
+            }
+
+            .fa-arrow-right {
+                display: none;
+            }
         }
 
         .menu-right {
@@ -106,4 +122,87 @@ img {
 
 .main-container {
     flex: 1;
+    display: flex;
+
+    .sidebar {
+        background: $grisOscuro;
+        flex: 0 0 20rem;
+        padding: 1rem;
+        color: $blanco;
+        transition: margin-left .3s ease;
+
+        .user {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            font-weight: bold;
+
+            img {
+                max-width: 5rem;
+            }
+
+            span {
+                font-weight: normal;
+            }
+        }
+
+        .search {
+            margin-top: 1rem;
+
+            input[type="text"] {
+                width: 100%;
+                height: 2.3rem;
+                border: none;
+                border-radius: 10px;
+                padding-left: 1rem;
+            }
+        }
+
+        .admin-menu {
+            margin-top: 2rem;
+
+            .menu {
+                list-style-type: none;
+                padding: 0 0 0 1rem;
+
+                > li {
+                    padding: .5rem;
+
+                    &:hover {
+                        ul {
+                            display: block;
+                        }
+                    }
+
+                    a {
+                        color: $blanco;
+                        text-decoration: none;
+                        padding: .5rem;
+                        transition: padding-left .3s ease;
+
+                        &:hover {
+                            background-color: $primario;
+                            padding-left: 2rem;
+                        }
+                    }
+
+                    ul {
+                        display: none;
+                        margin-top: 1rem;
+                        list-style-type: none;
+                        background: darken($grisOscuro, 3);
+                        padding: 1rem;
+
+                        li {
+                            margin-bottom: 1rem;
+
+                            &:last-of-type {
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

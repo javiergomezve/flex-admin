@@ -30,6 +30,10 @@ img {
   display: none;
 }
 
+.no-menu.page .sidebar {
+  margin-left: -20rem;
+}
+
 .page {
   min-height: 100%;
   display: -webkit-box;
@@ -113,6 +117,15 @@ img {
   padding: 1rem;
 }
 
+.header .bar .menu-left i {
+  color: #FFFFFF;
+  font-size: 1.5rem;
+}
+
+.header .bar .menu-left .fa-arrow-right {
+  display: none;
+}
+
 .header .bar .menu-right {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -149,5 +162,97 @@ img {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main-container .sidebar {
+  background: #373737;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 20rem;
+          flex: 0 0 20rem;
+  padding: 1rem;
+  color: #FFFFFF;
+  -webkit-transition: margin-left .3s ease;
+  transition: margin-left .3s ease;
+}
+
+.main-container .sidebar .user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-weight: bold;
+}
+
+.main-container .sidebar .user img {
+  max-width: 5rem;
+}
+
+.main-container .sidebar .user span {
+  font-weight: normal;
+}
+
+.main-container .sidebar .search {
+  margin-top: 1rem;
+}
+
+.main-container .sidebar .search input[type="text"] {
+  width: 100%;
+  height: 2.3rem;
+  border: none;
+  border-radius: 10px;
+  padding-left: 1rem;
+}
+
+.main-container .sidebar .admin-menu {
+  margin-top: 2rem;
+}
+
+.main-container .sidebar .admin-menu .menu {
+  list-style-type: none;
+  padding: 0 0 0 1rem;
+}
+
+.main-container .sidebar .admin-menu .menu > li {
+  padding: .5rem;
+}
+
+.main-container .sidebar .admin-menu .menu > li:hover ul {
+  display: block;
+}
+
+.main-container .sidebar .admin-menu .menu > li a {
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: .5rem;
+  -webkit-transition: padding-left .3s ease;
+  transition: padding-left .3s ease;
+}
+
+.main-container .sidebar .admin-menu .menu > li a:hover {
+  background-color: #005b9f;
+  padding-left: 2rem;
+}
+
+.main-container .sidebar .admin-menu .menu > li ul {
+  display: none;
+  margin-top: 1rem;
+  list-style-type: none;
+  background: #2f2f2f;
+  padding: 1rem;
+}
+
+.main-container .sidebar .admin-menu .menu > li ul li {
+  margin-bottom: 1rem;
+}
+
+.main-container .sidebar .admin-menu .menu > li ul li:last-of-type {
+  margin-bottom: 0;
 }
 
